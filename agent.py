@@ -15,7 +15,8 @@ from dotenv import load_dotenv
 load_dotenv()
 API_KEY = os.getenv("OPENROUTER_API_KEY")
 HF_TOKEN = os.getenv("HF_TOKEN")
-
+print("OpenRouter key loaded:", bool(API_KEY))
+print("OpenRouter prefix:", API_KEY[:6] if API_KEY else None)
 # =========================
 # LLM
 # =========================
