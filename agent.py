@@ -13,10 +13,8 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-
-API_KEY = os.getenv("open_ai_key")
+API_KEY = os.getenv("OPENROUTER_API_KEY")
 HF_TOKEN = os.getenv("HF_TOKEN")
-
 
 # =========================
 # LLM
@@ -24,7 +22,7 @@ HF_TOKEN = os.getenv("HF_TOKEN")
 
 llm = ChatOpenAI(
     model="openrouter/free",
-    api_key=os.environ["open_ai_key"],
+    api_key=API_KEY,
     base_url="https://openrouter.ai/api/v1",
     temperature=0
 )
